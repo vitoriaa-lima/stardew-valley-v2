@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade Junimo | Cadastro</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="./assets/icon/icone.svg">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div>
+        <img class="logo" src="./assets/images/topo.png" alt="logo stardew valley">
+    </div>
+
+    <div class="centro">
+        <div class="titulo">
+            <div>
+                <img src="./assets/icon/galinha.svg">
+                <h1>CADASTRO</h1>
+            </div>
+            <p>Crie uma conta e tenha acesso a informações úteis que<br>
+                possam facilitar sua game-play!</p>
+        </div>
+
+        <div class="formulario">
+            <div class="campo">
+                <span>Nome</span>
+                <input id="input_nome" placeholder="Seu nome" type="text">
+            </div>
+
+            <div class="campo">
+                <span>Email</span>
+                <input id="input_email" placeholder="exemplo@gmail.com" type="text">
+            </div>
+
+            <div class="campo">
+                <span>Data de Nascimento</span>
+                <input maxlength="8" id="input_data_nascimento" type="date">
+            </div>
+
+            <div class="campo">
+                <span id="span_personagem">Personagem Favorito</span>
+                <select name="" id=""></select>
+            </div>
+
+            <div class="campo campos">
+                <div style="gap: 12px" class="campo-vertical">
+                    <span>Alcançou a perfeição?</span>
+                    <div class="opcao">
+                        <label>
+                            <input type="radio" name="perfeicao" value="sim"> Sim
+                        </label>
+                        <label>
+                            <input type="radio" name="perfeicao" value="nao"> Não
+                        </label>
+                    </div>
+                </div>
+
+                <div class="campo-vertical">
+                    <span>Se sim, quantas vezes?</span>
+                    <input id="input_qtd_perfeicao" type="number">
+                </div>
+            </div>
+
+            <div class="campo">
+                <span>Senha</span>
+                <input id="senha_input" placeholder="******" type="txt">
+            </div>
+
+            <div class="campo">
+                <span>Confirmar senha</span>
+                <input id="input_confirmacao_senha" placeholder="******" type="text">
+            </div>
+
+            <button onclick="cadastrar()">Ir para a próxima etapa</button>
+            <span>Já tem uma conta? <a href="./login.html">Clique aqui</a>.</span>
+        </div>
+    </div>
+    </div>
+
+    <div class="direita">
+        <div class="alerta">
+            <img src="./assets/icon/alerta.svg" alt="">
+            <span>Preencha todos os campos!</span>
+        </div>
+    </div>
+</body>
+
+</html>
