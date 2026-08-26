@@ -12,13 +12,14 @@ html{
 
 body{
     background-image: url('./assets/images/fundo.png');
-    background-size: cover;
-    background-position: center;
+    /* background-size: cover; */
+    /* background-position: center; */
     background-repeat: no-repeat;
 
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
+    padding-bottom: 30px;
 }
 
 .logo{
@@ -45,6 +46,21 @@ body{
         width: 38px;
         height: 38px;
         margin-right: 5px;
+    }
+}
+
+.sucesso{
+    background-color: #BCFE82;
+    padding: 12.5px;
+
+    span{
+        color: #386900;
+        margin-left: 5px;
+    }
+
+    img{
+        width: 29px;
+        height: 29px;
     }
 }
 
@@ -87,8 +103,8 @@ body{
     flex-direction: column;
     background-color: #F3B46C;
     border-radius: 5px;
-    padding: 20px 30px 15px 30px;
-    gap: 15px;
+    padding: 25px 30px 20px 30px;
+    gap: 18px;
     color: #3E2429;
     box-shadow: -6px 6px 6px 1px #0000005d;
 }
@@ -103,7 +119,7 @@ body{
 
 .formulario button, select, input{
     font-size: 12px;
-    height: 32px;
+    height: 36px;
     width: 100%;
 }
 
@@ -201,4 +217,29 @@ input[type="date"] {
 input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
+}
+
+.opcoes{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 14px;
+}
+
+.labels label{
+    margin-bottom: 10px;
+}
+
+.checkbox span{
+    text-align: start !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield;
 }
