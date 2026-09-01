@@ -1,6 +1,7 @@
 package com.sptech.backend;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Usuario {
     private Integer id;
@@ -11,11 +12,12 @@ public class Usuario {
     private Integer qtdPerfeicao;
     private String senha;
     private Personagem personagemFavorito;
+    private List<Fazenda> fazendas;
 
     public Usuario() {
     }
 
-    public Usuario(Integer id, String nome, String email, LocalDate dtNascimento, Boolean perfeicao, Integer qtdPerfeicao, String senha, Personagem personagemFavorito) {
+    public Usuario(Integer id, String nome, String email, LocalDate dtNascimento, Boolean perfeicao, Integer qtdPerfeicao, String senha, Personagem personagemFavorito, List<Fazenda> fazendas) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -24,6 +26,7 @@ public class Usuario {
         this.qtdPerfeicao = qtdPerfeicao;
         this.senha = senha;
         this.personagemFavorito = personagemFavorito;
+        this.fazendas = fazendas;
     }
 
     public Integer getId() {
@@ -88,5 +91,13 @@ public class Usuario {
 
     public void setPersonagemFavorito(Personagem personagemFavorito) {
         this.personagemFavorito = personagemFavorito;
+    }
+
+    public List<Fazenda> getFazendas() {
+        return fazendas;
+    }
+
+    public void setFazendas(List<Fazenda> fazendas) {
+        this.fazendas = fazendas;
     }
 }

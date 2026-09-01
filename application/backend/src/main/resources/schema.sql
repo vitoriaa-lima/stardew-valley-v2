@@ -13,7 +13,7 @@ CREATE TABLE usuario (
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     dt_nascimento DATE,
-    perfeicao TINYINT,
+    perfeicao BOOLEAN,
     qtd_perfeicao INT,
     senha VARCHAR(45) NOT NULL,
     fk_personagem_favorito INT,
