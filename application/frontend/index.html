@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body onload="carregar()">
     <div>
         <img class="logo" src="./assets/images/topo.png" alt="logo stardew valley">
     </div>
@@ -72,30 +72,30 @@
                 <span>Selecione as fazendas que você já usou:</span>
                 <div class="opcoes">
                     <div class="labels">
-                    <label>
-                        <input type="checkbox" id=""> Padrão
-                    </label>
-                    <label>
-                        <input type="checkbox" id=""> Colina
-                    </label>
-                </div>
-                <div class="labels">
-                    <label>
-                        <input type="checkbox" id=""> Entre Riachos
-                    </label>
-                    <label>
-                        <input type="checkbox" id=""> Floresta
-                    </label>
-                </div>
+                        <label>
+                            <input type="checkbox" id=""> Padrão
+                        </label>
+                        <label>
+                            <input type="checkbox" id=""> Colina
+                        </label>
+                    </div>
+                    <div class="labels">
+                        <label>
+                            <input type="checkbox" id=""> Entre Riachos
+                        </label>
+                        <label>
+                            <input type="checkbox" id=""> Floresta
+                        </label>
+                    </div>
 
-                <div class="labels">
-                    <label>
-                        <input type="checkbox" id=""> Remota
-                    </label>
-                    <label>
-                        <input type="checkbox" id=""> Praia
-                    </label>
-                </div>
+                    <div class="labels">
+                        <label>
+                            <input type="checkbox" id=""> Remota
+                        </label>
+                        <label>
+                            <input type="checkbox" id=""> Praia
+                        </label>
+                    </div>
                 </div>
             </div>
 
@@ -129,3 +129,22 @@
 </body>
 
 </html>
+
+<script>
+    function carregar() {
+        fetch("http://localhost:8080/fazendas")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erro na requisição");
+                }
+
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error("Erro:", error);
+            });
+    }
+</script>
