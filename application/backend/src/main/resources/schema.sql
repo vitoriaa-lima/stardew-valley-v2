@@ -1,15 +1,15 @@
 CREATE TABLE personagem (
-    id_personagem INT PRIMARY KEY AUTO_INCREMENT,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE fazenda (
-    id_fazenda INT PRIMARY KEY AUTO_INCREMENT,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL
 );
 
 CREATE TABLE usuario (
-    id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     dt_nascimento DATE,
@@ -19,7 +19,7 @@ CREATE TABLE usuario (
     fk_personagem_favorito INT,
     CONSTRAINT fk_usuario_personagem
         FOREIGN KEY (fk_personagem_favorito)
-            REFERENCES personagem(id_personagem)
+            REFERENCES personagem(id)
 );
 
 CREATE TABLE usuario_fazenda (
@@ -28,10 +28,10 @@ CREATE TABLE usuario_fazenda (
     PRIMARY KEY (fk_usuario, fk_fazenda),
     CONSTRAINT fk_usuario_fazenda_usuario
         FOREIGN KEY (fk_usuario)
-            REFERENCES usuario(id_usuario),
+            REFERENCES usuario(id),
     CONSTRAINT fk_usuario_fazenda_fazenda
         FOREIGN KEY (fk_fazenda)
-            REFERENCES fazenda(id_fazenda)
+            REFERENCES fazenda(id)
 );
 
 INSERT INTO fazenda (nome) VALUES

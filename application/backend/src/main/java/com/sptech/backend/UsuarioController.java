@@ -4,10 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -16,6 +13,7 @@ import java.time.LocalDate;
 
 @RestController
 @RequestMapping("/usuarios")
+@CrossOrigin(origins="http://127.0.0.1:5500")
 public class UsuarioController {
     private final JdbcTemplate jdbcTemplate;
 
